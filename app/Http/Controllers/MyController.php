@@ -18,6 +18,6 @@ class MyController extends Controller
     {
         $category = Categories::all();
         $products = Product::all();
-        return view('product',compact('products'));
+        return view('product',compact('products','category'));
     }
 }

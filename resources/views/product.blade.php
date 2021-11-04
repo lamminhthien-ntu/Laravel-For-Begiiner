@@ -2,14 +2,14 @@
 @section('title','Home Page')
 
 @section('content')
-    {{$category}}
+{{--    {{$category}}--}}
     <h1>Products</h1>
 
     <table class="table table-striped">
         <tr>
             <th>ID</th>
-            <th>Name</th>
             <th>Category</th>
+            <th>Name</th>
             <th>Price</th>
             <th>Desctiption</th>
         </tr>
