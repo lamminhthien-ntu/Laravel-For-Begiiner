@@ -12,6 +12,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Desctiption</th>
+            <th>Edit</th>
         </tr>
         <tbody>
         @foreach($products as $row)
@@ -21,6 +22,7 @@
                 <td>{{$row->name}}</td>
                 <td>{{$row->price}}</td>
                 <td>{{$row->description}}</td>
+                <td><a href="{{url('edit/'.$row->id)}}" class="btn btn-primary">Edit</a></td>
             </tr>
         @endforeach
         </tbody>

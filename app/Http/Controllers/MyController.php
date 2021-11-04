@@ -20,4 +20,11 @@ class MyController extends Controller
         $products = Product::all();
         return view('product',compact('products','category'));
     }
+
+    public  function edit($id)
+    {
+        $products = Product::all();
+        $product = $products->find($id);
+        return view('edit',compact('product'));
+    }
 }
