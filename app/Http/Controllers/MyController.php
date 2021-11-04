@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,7 @@ class MyController extends Controller
 
     public  function  show()
     {
+        $category = Categories::all();
         $products = Product::all();
         return view('product',compact('products'));
     }
