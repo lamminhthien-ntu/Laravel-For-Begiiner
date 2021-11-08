@@ -19,6 +19,10 @@
                  <tr>
                      <td>{{$item->name}}</td>
                      <td>{{$item->description}}</td>
+                     <td>
+                         <a href="{{url('edit/'.$item->id)}}" class="btn btn-sm btn-primary">Edit</a>
+                         <a href="{{url('delete/'.$item->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                     </td>
                  </tr>
             @endforeach
         </tbody>
