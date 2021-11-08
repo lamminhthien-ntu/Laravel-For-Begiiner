@@ -26,6 +26,9 @@ Route::get('/products','App\Http\Controllers\MyController@show');
 Route::get('/total-users','App\Http\Controllers\MyController@index');
 
 Route::get('edit/{id}','App\Http\Controllers\MyController@edit');
+Route::get('/add-blog','BlogController@create');
+Route::get('/save-blog','BlogController@create');
+
 
 
 Auth::routes();
