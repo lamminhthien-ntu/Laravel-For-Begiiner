@@ -46,7 +46,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $blog->delete();
-        return redirect('blogs')->with('status','Blog Deleted Successfully');
+        return redirect('blogs')->with('status_delete','Blog Deleted Successfully');
 
 
     }

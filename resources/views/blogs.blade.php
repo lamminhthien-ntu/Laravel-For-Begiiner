@@ -8,9 +8,9 @@
         <a href="{{url('/add-blog')}}" class="btn btn-primary">Add Blog</a>
     </div>
 
-    @if (session('status'))
+    @if (session('status_delete'))
         <div class="alert-success">
-            <h6>{{session('status')}}</h6>
+            <h6>{{session('status_delete')}}</h6>
         </div>
 
     @endif

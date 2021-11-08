@@ -3,4 +3,5 @@
 
 @section('content')
     <h1>Hey this is home page</h1>
+
 @endsection
