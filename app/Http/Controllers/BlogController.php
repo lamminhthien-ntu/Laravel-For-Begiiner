@@ -42,4 +42,13 @@ class BlogController extends Controller
         return redirect('blogs');
     }
 
+    public  function delete($id)
+    {
+        $blog = Blog::find($id);
+        $blog->delete();
+        return redirect('blogs')->with('status','Blog Deleted Successfully');
+
+
+    }
+
 }

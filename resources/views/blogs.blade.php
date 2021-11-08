@@ -7,6 +7,10 @@
     <div class="float-right">
         <a href="{{url('/add-blog')}}" class="btn btn-primary">Add Blog</a>
     </div>
+
+    @if (session('status'))
+        {{session('status')}}
+    @endif
     <table class="table table-striped">
         <thead>
             <tr>
@@ -22,7 +26,7 @@
                      <td>{{$item->description}}</td>
                      <td>
                          <a href="{{url('blog-edit/'.$item->id)}}" class="btn btn-sm btn-primary">Edit</a>
-                         <a href="{{url('delete/'.$item->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                         <a href="{{url('blog-delete/'.$item->id)}}" class="btn btn-sm btn-danger">Delete</a>
                      </td>
                  </tr>
             @endforeach
