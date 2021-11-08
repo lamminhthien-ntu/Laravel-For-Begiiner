@@ -18,12 +18,12 @@ class BlogController extends Controller
         $blog->name=$request->input('name');
         $blog->description=$request->input('description');
         $blog->save();
-        return redirect('blogs');
+        return redirect('blog');
     }
 
     public function index()
     {
-        $blogs = Blog::all();
-        return view('blogs',compact($blogs));
+        $blog = Blog::all();
+        return view('blogs',compact('blog'));
     }
 }

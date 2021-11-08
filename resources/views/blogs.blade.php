@@ -7,9 +7,22 @@
     <div class="float-right">
         <a href="{{url('/add-blog')}}" class="btn btn-primary">Add Blog</a>
     </div>
-    @foreach($blogs as $item)
-        {{$item}}
-    @endforeach
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+             @foreach($blog as $item)
+                 <tr>
+                     <td>{{$item->title}}</td>
+                     <td>{{$item->description}}</td>
+                 </tr>
+            @endforeach
+        </tbody>
+    </table>
 
     {{--    {{$products}}--}}
 @endsection
