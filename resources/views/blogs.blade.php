@@ -9,7 +9,10 @@
     </div>
 
     @if (session('status'))
-        {{session('status')}}
+        <div class="alert-success">
+            <h6>{{session('status')}}</h6>
+        </div>
+
     @endif
     <table class="table table-striped">
         <thead>
