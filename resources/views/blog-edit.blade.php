@@ -17,10 +17,29 @@
         </thead>
         <tbody>
             <tr>
-                <td> <input type="text" value="{{$blog->id}}"> </td>
-                <td> <input type="text" value="{{$blog->name}}"> </td>
-                <td> <input type="text" value="{{$blog->description}}"> </td>
-                <td><button type="submit" class="btn btn-primary">Update</button></td>
+                <form method="post" action="{{url('blog-update/'.$blog->id)}}">
+                    @csrf
+                    <td>
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" disabled  class="form-control" value="{{$blog->id}}">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text"  class="form-control" name="name" value="{{$blog->name}}">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control" name="description" value="{{$blog->description}}">
+                        </div>
+                    </td>
+                    <td><button type="submit" class="btn btn-primary">Update</button></td>
+                </form>
             </tr>
         </tbody>
     </table>

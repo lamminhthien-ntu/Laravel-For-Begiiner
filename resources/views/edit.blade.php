@@ -15,11 +15,41 @@
         </thead>
         <tbody>
             <tr>
-                <td><input type="text" value="{{$product->id}}"></td>
-                <td><input type="text" value="{{$product->categories->name}}"></td>
-                <td><input type="text" value="{{$product->name}}"></td>
-                <td><input type="text" value="{{$product->price}}"></td>
-                <td><input type="text" value="{{$product->description}}"></td>
+                <td>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="text" class="form-control" value="{{$product->id}}">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" class="form-control" value="{{$product->categories->name}}">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" value="{{$product->name}}">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control" value="{{$product->price}}">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" class="form-control" value="{{$product->description}}">
+                    </div>
+                </td>
+
             </tr>
         </tbody>
     </table>
