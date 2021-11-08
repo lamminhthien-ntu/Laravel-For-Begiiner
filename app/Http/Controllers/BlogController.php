@@ -21,6 +21,11 @@ class BlogController extends Controller
         return redirect('blog');
     }
 
+    public function  edit($id)
+    {
+        $blog = Blog::find($id);
+        return view('blog-edit',compact('blog'));
+    }
     public function index()
     {
         $blog = Blog::all();

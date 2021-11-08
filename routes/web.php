@@ -29,6 +29,7 @@ Route::get('edit/{id}','App\Http\Controllers\MyController@edit');
 Route::get('/add-blog','App\Http\Controllers\BlogController@create');
 Route::post('/save-blog','App\Http\Controllers\BlogController@insert');
 Route::get('/blogs','App\Http\Controllers\BlogController@index');
+Route::get('blog-edit/{id}','App\Http\Controllers\BlogController@edit');
 
 
 

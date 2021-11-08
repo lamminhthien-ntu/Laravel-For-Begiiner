@@ -10,7 +10,8 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Title</th>
+                <th>ID</th>
+                <th>Name</th>
                 <th>Description</th>
             </tr>
         </thead>
@@ -20,7 +21,7 @@
                      <td>{{$item->name}}</td>
                      <td>{{$item->description}}</td>
                      <td>
-                         <a href="{{url('edit/'.$item->id)}}" class="btn btn-sm btn-primary">Edit</a>
+                         <a href="{{url('blog-edit/'.$item->id)}}" class="btn btn-sm btn-primary">Edit</a>
                          <a href="{{url('delete/'.$item->id)}}" class="btn btn-sm btn-danger">Delete</a>
                      </td>
                  </tr>
