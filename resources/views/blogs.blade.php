@@ -17,7 +17,7 @@
         <tbody>
              @foreach($blog as $item)
                  <tr>
-                     <td>{{$item->title}}</td>
+                     <td>{{$item->name}}</td>
                      <td>{{$item->description}}</td>
                  </tr>
             @endforeach
