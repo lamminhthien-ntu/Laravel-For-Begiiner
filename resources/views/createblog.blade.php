@@ -2,6 +2,7 @@
 
 @section('content')
     <form method="post" action="{{url('save-blog')}}">
+        {{csrf_field()}}
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Blog Name</label>
             <input type="text" class="form-control" name="name" >
