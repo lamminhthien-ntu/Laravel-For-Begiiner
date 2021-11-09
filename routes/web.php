@@ -18,32 +18,25 @@ Route::get('/', function () {
 });
 
 Route::get('/about-us-page',function (){
-    return view('about');
+    $data="Hello I'm data from Controller or Function of Route";
+    return view('about',compact('data'));
 })->name('about');
 
-Route::get('/products','App\Http\Controllers\MyController@show');
-Route::get('/total-users','App\Http\Controllers\MyController@index');
-Route::get('edit/{id}','App\Http\Controllers\MyController@edit');
-//Route::get('/add-blog','App\Http\Controllers\BlogController@create');
-//Route::post('/save-blog','App\Http\Controllers\BlogController@insert');
-//Route::get('/blogs','App\Http\Controllers\BlogController@index');
-//Route::get('blog-edit/{id}','App\Http\Controllers\BlogController@edit');
-//Route::post('blog-update/{id}','App\Http\Controllers\BlogController@update');
-//Route::get('blog-delete/{id}','App\Http\Controllers\BlogController@delete');
-Route::resource('blog','App\Http\Controllers\BlogController');
+Route::get('/products','MyController@show');
+Route::get('/total-users','MyController@index');
+Route::get('edit/{id}','MyController@edit');
+//Route::get('/add-blog','BlogController@create');
+//Route::post('/save-blog','BlogController@insert');
+//Route::get('/blogs','BlogController@index');
+//Route::get('blog-edit/{id}','BlogController@edit');
+//Route::post('blog-update/{id}','BlogController@update');
+//Route::get('blog-delete/{id}','BlogController@delete');
+Route::resource('blog','BlogController');
 
-Route::get('home','App\Http\Controllers\BlogController@index');
+Route::get('home','BlogController@index');
 
-Route::resource('blog2',"App\Http\Controllers\Blog2Controller");
-
-
-
-
-
-
-
-
+Route::resource('blog2',"Blog2Controller");
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
